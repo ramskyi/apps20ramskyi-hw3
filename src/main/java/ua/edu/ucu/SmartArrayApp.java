@@ -20,8 +20,8 @@ public class SmartArrayApp {
 
         MyComparator cmp = new MyComparator() {
             @Override
-            public int compare(Object o1, Object o2) {
-                return ((Integer) o1) - ((Integer) o2);
+            public int compare(Object oOne, Object oTwo) {
+                return ((Integer) oOne) - ((Integer) oTwo);
             }
         };
 
@@ -53,17 +53,19 @@ public class SmartArrayApp {
         MyPredicate pr = new MyPredicate() {
             @Override
             public boolean test(Object t) {
+                double minAllowedGrade = 4;
                 Student student = (Student) t;
-                return student.getGPA() >= 4 && student.getYear() == 2;
+                return student.getGPA() >= minAllowedGrade
+                        && student.getYear() == 2;
             }
         };
 
         MyComparator cmp = new MyComparator() {
             @Override
-            public int compare(Object o1, Object o2) {
-                String student1 = ((Student) o1).getSurname();
-                String student2 = ((Student) o2).getSurname();
-                return student1.compareTo(student2);
+            public int compare(Object oOne, Object oTwo) {
+                String studentOne = ((Student) oOne).getSurname();
+                String studentTwo = ((Student) oTwo).getSurname();
+                return studentOne.compareTo(studentTwo);
             }
         };
 
