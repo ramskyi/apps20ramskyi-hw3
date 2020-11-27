@@ -47,5 +47,4 @@ class Student {
         return "Student{name=" + name + ", surname=" + surname + ", " + "GPA="
                 + GPA + ", year=" + year + '}';
     }
-
 }
